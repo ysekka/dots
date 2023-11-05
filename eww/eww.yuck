@@ -1,0 +1,23 @@
+(deflisten keyboard-layout :initial "ENGLISH(US)" "bash ./scripts/language.bash")
+(deflisten keyboard-state :initial "0" "./scripts/xkbstate")
+(deflisten active-window :initial "{}" "bash ./scripts/window.bash active")
+(deflisten current-workspace :initial "1" "bash ./scripts/gaw.bash")
+(deflisten all-workspaces :initial "[]" "bash ./scripts/gw.bash")
+
+(defvar power-toggle false)
+(defvar clock-toggle false)
+(defvar bar-toggle false)
+
+(include "./widgets/workspaces.yuck")
+(include "./widgets/battery.yuck")
+(include "./widgets/layout.yuck")
+(include "./widgets/window.yuck")
+(include "./widgets/state.yuck")
+(include "./widgets/clock.yuck")
+(include "./widgets/power.yuck")
+(include "./widgets/cpu.yuck")
+(include "./widgets/ram.yuck")
+
+(include "./windows/power.yuck")
+(include "./windows/clock.yuck")
+(include "./windows/bar.yuck")

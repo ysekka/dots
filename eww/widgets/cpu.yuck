@@ -1,0 +1,23 @@
+(
+    defwidget cpu [?class ?height ?width ?range value]
+    (
+        box
+        :class "cpu-widget ${class}"
+        (
+            box
+            :spacing 4
+            :space-evenly false
+            :class "cpu-inner ${(value >= 60) ? "high" : ""}"
+            (
+                graph
+                :class "cpu-graph"
+                :width width
+                :height height
+                :thickness 2
+                :time-range range
+                :line-style "round"
+                :value {value}
+            )
+        )
+    )
+)

@@ -1,0 +1,12 @@
+(
+    defwidget layout [?class layout]
+    (
+        box
+        :class "layout-widget ${class}"
+        (
+            box
+            :class "layout-inner"
+            layout
+        )
+    )
+)

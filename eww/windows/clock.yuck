@@ -1,0 +1,51 @@
+(
+    defwindow clock
+    :monitor 0
+    :geometry (
+        geometry
+        :x "0"
+        :y "2px"
+        :width "16%"
+        :anchor "top center"
+    )
+    :stacking "overlay"
+    :focusable false
+    (
+        box
+        :spacing 4
+        :class "clock-inner"
+        :space-evenly false
+        :orientation "vertical"
+        (
+            circular-progress
+            :value "${((formattime(EWW_TIME, "%H") % 12) / 12) * 100}"
+            :width 128
+            :height 128
+            :start-at 75
+            :thickness 16
+            :class "clock-circle"
+            :style "color: ${(formattime(EWW_TIME, "%H") >= 6 && formattime(EWW_TIME, "%H") <= 18) ? "#ebcb8b" : "#5e81ac"};"
+            (
+                image
+                :image-width 64
+                :image-height 64
+                :class "clock-image"
+                :path "./images/${(formattime(EWW_TIME, "%H") >= 6 && formattime(EWW_TIME, "%H") <= 18) ? "day" : "night"}.svg"
+            )
+        )
+        (
+            label
+            :class "clock-time"
+            :text {formattime(EWW_TIME, "%H:%M:%S")}
+        )
+        (
+            label
+            :class "shahanshahi-calendar"
+            :text "Gāhśomāre Śāhanśāhi: ${(formattime(EWW_TIME, "%j") >= 107)? formattime(EWW_TIME, "%Y") + 559 : formattime(EWW_TIME, "%Y") + 558}"
+        )
+        (
+            calendar
+            :class "clock-calendar"
+        )
+    )
+)

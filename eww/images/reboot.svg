@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1024"
+   height="1024"
+   viewBox="0 0 1024 1024"
+   version="1.1"
+   id="svg15231"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="reboot.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview15233"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="true"
+     inkscape:zoom="0.25291616"
+     inkscape:cx="359.80302"
+     inkscape:cy="802.63751"
+     inkscape:window-width="953"
+     inkscape:window-height="1072"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid16078"
+       spacingx="32"
+       spacingy="32"
+       empspacing="4" />
+  </sodipodi:namedview>
+  <defs
+     id="defs15228" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect20853"
+       style="fill:#2e3440;stroke-width:4;paint-order:stroke fill markers;fill-opacity:1"
+       d="M 768 512 C 768 653.82358 653.82358 768 512 768 L 512 896 C 724.73537 896 896 724.73537 896 512 L 768 512 z " />
+    <circle
+       style="fill:#2e3440;stroke-width:4;paint-order:stroke fill markers;fill-opacity:1"
+       id="path20933"
+       cx="512"
+       cy="832"
+       r="64" />
+    <circle
+       style="fill:#2e3440;stroke-width:4;paint-order:stroke fill markers;fill-opacity:1"
+       id="path20933-3"
+       cx="832"
+       cy="512"
+       r="64" />
+    <path
+       id="rect20853-6"
+       style="fill:#2e3440;stroke-width:4;paint-order:stroke fill markers;fill-opacity:1"
+       d="M 256,512 C 256,370.17642 370.17642,256 512,256 V 128 C 299.26463,128 128,299.26463 128,512 Z" />
+    <circle
+       style="fill:#2e3440;stroke-width:4;paint-order:stroke fill markers;fill-opacity:1"
+       id="path20933-0"
+       cx="-512"
+       cy="-192"
+       r="64"
+       transform="scale(-1)" />
+    <circle
+       style="fill:#2e3440;stroke-width:4;paint-order:stroke fill markers;fill-opacity:1"
+       id="path20933-0-2"
+       cx="-512"
+       cy="-512"
+       r="64"
+       transform="scale(-1)" />
+    <circle
+       style="fill:#2e3440;stroke-width:4;paint-order:stroke fill markers;fill-opacity:1"
+       id="path20933-3-6"
+       cx="-192"
+       cy="-512"
+       r="64"
+       transform="scale(-1)" />
+  </g>
+</svg>

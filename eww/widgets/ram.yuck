@@ -1,0 +1,22 @@
+(
+    defwidget ram [?class ram circle-size]
+    (
+        box
+        :class "ram-widget ${class}"
+        (
+            box
+            :spacing 4
+            :space-evenly false
+            :class "ram-inner"
+            (
+                circular-progress
+                :class "battery-circle"
+                :width circle-size
+                :height circle-size
+                :start-at 75
+                :thickness 4
+                :value ram
+            )
+        )
+    )
+)

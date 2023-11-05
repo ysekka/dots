@@ -1,0 +1,39 @@
+(
+    defwindow power
+    :monitor 0
+    :geometry (
+        geometry
+        :x "0"
+        :y "0"
+        :anchor "center"
+    )
+    :stacking "overlay"
+    :exclusive true
+    :focusable false
+    (
+        box
+        :spacing 4
+        :class "power-inner"
+        (
+            power-item
+            :class "poweroff"
+            :image-size 128
+            :icon "poweroff.svg"
+            :command "systemctl poweroff"
+        )
+        (
+            power-item
+            :class "reboot"
+            :image-size 128
+            :icon "reboot.svg"
+            :command "systemctl reboot"
+        )
+        (
+            power-item
+            :class "logout"
+            :image-size 128
+            :icon "logout.svg"
+            :command "hyprctl dispatch exit X"
+        )
+    )
+)

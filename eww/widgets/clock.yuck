@@ -1,0 +1,18 @@
+(
+    defwidget clock [?class ?timeout time]
+    (
+        eventbox
+        :class "clock-widget ${class}"
+        :onclick "bash ./scripts/clock.bash"
+        :timeout timeout
+        (
+            box
+            :class "clock-inner"
+            (
+                label
+                :class "clock-text"
+                :text time
+            )
+        )
+    )
+)

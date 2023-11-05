@@ -1,0 +1,12 @@
+files=(/home/ska/Pictures/wallpapers/*.png)
+wallpaper=("${files[RANDOM % ${#files[@]}]}")
+
+cursor_pos=$(hyprctl cursorpos -j)
+cursor_x="$(echo $cursor_pos | jq '.x')"
+cursor_y="$(echo $cursor_pos | jq '.y')"
+cursor_y=$(echo "1080 - $cursor_y" | bc)
+cursor_pos="$cursor_x, $cursor_y"
+
+swww img $wallpaper --transition-step 200 --transition-fps 75 --transition-type grow --transition-angle 30 --transition-duration 1 --transition-pos "$cursor_pos"
+
+sleep 128

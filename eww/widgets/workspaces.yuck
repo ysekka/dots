@@ -1,0 +1,26 @@
+(
+    defwidget workspaces [?class ?spacing image-size workspaces current-workspace]
+    (
+        eventbox
+        :class "workspaces-widget ${class}"
+        :onscroll "bash ./scripts/caw.bash {} ${current-workspace}"
+        (
+            box
+            :class "workspaces-inner"
+            :spacing spacing
+            :space-evenly false
+            (for workspace in workspaces
+                (
+                    eventbox
+                    :onclick "hyprctl dispatch workspace ${workspace.id}"
+                    (
+                        image
+                        :image-width image-size
+                        :image-height image-size
+                        :path "./images/workspace-${workspace.id == current-workspace ? "active" : (workspace.windows > 0) ? "occupied" : "empty"}.svg"
+                    )
+                )
+            )
+        )
+    )
+)

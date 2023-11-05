@@ -1,0 +1,28 @@
+(
+    defwidget battery [?class battery circle-size]
+    (
+        box
+        :class "battery-widget ${class}"
+        (
+            box
+            :spacing 4
+            :space-evenly false
+            :class "battery-inner ${(battery["status"] != "Charging")? (battery["status"] != "Not charging")? (battery["status"] != "Full")? (battery["status"] != "Discharging")? "" : "di" : "fu" : "nc" : "ch"}"
+            (
+                label
+                :class "battery-alert"
+                :visible {(battery["capacity"] <= 20) ? true : false}
+                :text "!"
+            )
+            (
+                circular-progress
+                :class "battery-circle"
+                :width circle-size
+                :height circle-size
+                :start-at 75
+                :thickness 4
+                :value {battery["capacity"]}
+            )
+        )
+    )
+)

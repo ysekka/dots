@@ -1,0 +1,15 @@
+(
+    defwidget power-item [class command icon image-size]
+    (
+        eventbox
+        :class "power-item ${class}"
+        :onclick command
+        (
+            image
+            :class "item-icon"
+            :image-width image-size
+            :image-height image-size
+            :path "./images/${icon}"
+        )
+    )
+)

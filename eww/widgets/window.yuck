@@ -1,0 +1,18 @@
+(
+    defwidget window [?class ?spacing window]
+    (
+        box
+        :class "window-widget ${class}"
+        (
+            box
+            :spacing spacing
+            :space-evenly false
+            :class "window-inner"
+            (
+                label
+                :class "window-name"
+                :text "${(window != "NULL")? window : "<---->"}"
+            )
+        )
+    )
+)

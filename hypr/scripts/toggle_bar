@@ -1,0 +1,15 @@
+pong="$(eww ping)"
+
+if [ $pong == "pong" ];
+then
+    toggle="$(eww get bar-toggle)"
+
+    if [ $toggle == "false" ];
+    then
+        eww open bar
+        eww update bar-toggle=true
+    else
+        eww close bar
+        eww update bar-toggle=false
+    fi
+fi

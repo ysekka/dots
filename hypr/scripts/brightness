@@ -1,0 +1,16 @@
+down() {
+brightnessctl -q set 5%-
+brightness=$(light -G | awk -F '.' '{print $1}')
+dunstify -a "BRIGHTNESS" "brightness: $brightness%" -h int:value:"$brightness" -i display-brightness-symbolic -r 2593 -u low
+}
+
+up() {
+brightnessctl -q set 5%+
+brightness=$(light -G | awk -F '.' '{print $1}')
+dunstify -a "BRIGHTNESS" "brightness: $brightness%" -h int:value:"$brightness" -i display-brightness-symbolic -r 2593 -u low
+}
+
+case "$1" in
+  up) up;;
+  down) down;;
+esac

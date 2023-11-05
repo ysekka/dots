@@ -1,0 +1,155 @@
+$nord0: #2e3440;
+$nord8: #88c0d0;
+$nord10: #5e81ac;
+$nord11: #bf616a;
+$nord12: #d08770;
+$nord13: #ebcb8b;
+$nord14: #a3be8c;
+$nord15: #b48ead;
+
+* {
+    margin: 0px;
+    padding: 0px;
+    color: $nord8;
+    font-weight: bold;
+    font-family: "skafont", "Fira Code";
+}
+
+.power {
+    background-color: transparent;
+
+    .power-inner {
+        padding: 4px;
+        border-radius: 4px;
+        border: solid 2px $nord8;
+        background-color: $nord0;
+
+        .power-item {
+            border-radius: 4px;
+            border: solid 2px $nord8;
+            background-color: $nord10;
+            transition: background-color 0.64s;
+
+            &:hover {
+                &.poweroff {
+                    background-color: $nord11;
+                }
+
+                &.reboot {
+                    background-color: $nord12;
+                }
+
+                &.logout {
+                    background-color: $nord13;
+                }
+            }
+        }
+    }
+}
+
+.clock {
+    background-color: transparent;
+
+    .clock-inner {
+        padding: 4px;
+        border-radius: 4px;
+        border: #88c0d0 2px solid;
+        background-color: #2e3440;
+
+        .clock-time {
+            font-size: 32px;
+        }
+
+        * {
+            border-radius: 4px;
+            border: #88c0d0 2px solid;
+        }
+    }
+}
+
+.bar {
+    background-color: transparent;
+
+    .bar-inner, .workspaces-inner, .window-inner, .clock-inner, .wallpaper-inner,
+    .layout-inner, .state-inner, .battery-inner, .cpu-inner, .ram-inner {
+        padding: 4px;
+        border-radius: 4px;
+        border: #88c0d0 2px solid;
+        background-color: #2e3440;
+    }
+
+    .state-inner {
+        &.k-1, &.k-2, &.k-3 {
+            .state-text {
+                color: $nord0;
+            }
+        }
+
+        &.k-1 {
+            border-color: $nord10;
+            background-color: $nord10;
+        }
+
+        &.k-2 {
+            border-color: $nord11;
+            background-color: $nord11;
+        }
+
+        &.k-3 {
+            border-color: $nord15;
+            background-color: $nord15;
+        }
+    }
+
+    .battery-inner {
+        .battery-alert {
+            color: $nord0;
+        }
+
+        &.fu, &.ch, &.di, &.nc {
+            .battery-circle {
+                color: $nord0;
+            }
+        }
+
+        &.fu {
+            border-color: $nord14;
+            background-color: $nord14;
+        }
+
+        &.ch {
+            border-color: $nord13;
+            background-color: $nord13;
+        }
+
+        &.di {
+            border-color: $nord12;
+            background-color: $nord12;
+        }
+
+        &.nc {
+            border-color: $nord11;
+            background-color: $nord11;
+        }
+    }
+
+    .cpu-inner {
+        padding: 0;
+        &.high {
+            border-color: $nord11;
+            background-color: $nord0;
+            .cpu-graph {
+                color: $nord11;
+                background-color: $nord11;
+            }
+        }
+
+        .cpu-graph {
+            background-color: $nord8;
+        }
+    }
+
+    .systray {
+        background-color: $nord0;
+    }
+}

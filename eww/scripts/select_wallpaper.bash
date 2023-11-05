@@ -1,0 +1,1 @@
+swww img --transition-type wipe --transition-angle 45 --transition-step 90 --transition-fps 60 "$(zenity --file-selection --title='wallpaper' --file-filter='Image | *.png *.jpg *.jpeg')"

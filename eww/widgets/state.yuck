@@ -1,0 +1,16 @@
+(
+    defwidget state [?class state]
+    (
+        box
+        :class "state-widget ${class}"
+        (
+            box
+            :class "state-inner k-${state}"
+            (
+                label
+                :class "state-text"
+                :text "<-${(state != "0")? (state != "1")? (state != "2")? (state != "3")? "-!-" : "N-C" : "-C-" : "-N-" : "---"}->"
+            )
+        )
+    )
+)

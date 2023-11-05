@@ -1,0 +1,21 @@
+down() {
+amixer -q sset Master 5%-
+volume=$(awk -F"[][]" '/Left:/ { print $2 }' <(amixer sget Master))
+dunstify -a "VOLUME" "volume: $volume" -h int:value:"$volume" -i audio-volume-low-symbolic -r 2593 -u low -t 2000
+}
+
+up() {
+amixer -q sset Master 5%+
+volume=$(awk -F"[][]" '/Left:/ { print $2 }' <(amixer sget Master))
+dunstify -a "VOLUME" "volume: $volume" -h int:value:"$volume" -i audio-volume-low-symbolic -r 2593 -u low -t 2000
+}
+
+mute() {
+amixer -q sset Master toggle
+}
+
+case "$1" in
+  up) up;;
+  down) down;;
+  mute) mute;;
+esac

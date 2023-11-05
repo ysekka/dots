@@ -1,0 +1,85 @@
+(
+    defwindow bar
+    :monitor 0
+    :geometry (
+        geometry
+        :x "0"
+        :y "4px"
+        :width "1912px"
+        :anchor "top center"
+    )
+    :stacking "overlay"
+    :exclusive true
+    :reserve (
+        struts
+        :distance "30%"
+        :side "top"
+    )
+    (
+        centerbox
+        :class "bar-inner"
+        (
+            box
+            :spacing 4
+            :halign "start"
+            :space-evenly false
+            (
+                workspaces
+                :spacing 2
+                :image-size 12
+                :workspaces all-workspaces
+                :current-workspace current-workspace
+            )
+            (
+                window
+                :spacing 4
+                :window active-window
+            )
+        )
+        (
+            box
+            :spacing 4
+            :halign "center"
+            :space-evenly false
+            (
+                clock
+                :time {formattime(EWW_TIME, "%H:%M")}
+            )
+        )
+        (
+            box
+            :spacing 4
+            :halign "end"
+            :space-evenly false
+            (
+                systray
+                :class "systray"
+            )
+            (
+                cpu
+                :range "16s"
+                :width 64
+                :height 16
+                :value {EWW_CPU["avg"]}
+            )
+            (
+                ram
+                :circle-size 16
+                :ram {EWW_RAM["used_mem_perc"]}
+            )
+            (
+                battery
+                :circle-size 16
+                :battery {EWW_BATTERY["BAT1"]}
+            )
+            (
+                layout
+                :layout keyboard-layout
+            )
+            (
+                state
+                :state keyboard-state
+            )
+        )
+    )
+)
